@@ -19,3 +19,10 @@ Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
+
+Route::get('dashboard', function()
+{
+    return View::make('dashboard');
+});
+
+?>
