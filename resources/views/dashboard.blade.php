@@ -11,14 +11,13 @@
     <link href="dashboard/css/bootstrap.min.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
 
-    <!-- Toastr style -->
-    <link href="dashboard/css/plugins/toastr/toastr.min.css" rel="stylesheet">
 
-    <!-- Gritter -->
     <link href="dashboard/js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
 
     <link href="dashboard/css/animate.css" rel="stylesheet">
     <link href="dashboard/css/style.css" rel="stylesheet">
+
+
 
 </head>
 

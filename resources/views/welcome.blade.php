@@ -1,48 +1,46 @@
-<!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
 
-		<title>IPM | Internal Project Management &beta; v1.0</title>
+		<style>
+			body {
+				margin: 0;
+				padding: 0;
+				width: 100%;
+				height: 100%;
+				color: #B0BEC5;
+				display: table;
+				font-weight: 100;
+				font-family: 'Lato';
+			}
 
-		<link href="dashboard/css/bootstrap.min.css" rel="stylesheet">
-		<link href="dashboard/font-awesome/css/font-awesome.css" rel="stylesheet">
+			.container {
+				text-align: center;
+				display: table-cell;
+				vertical-align: middle;
+			}
 
-		<link href="dashboard/css/animate.css" rel="stylesheet">
-		<link href="dashboard/css/style.css" rel="stylesheet">
+			.content {
+				text-align: center;
+				display: inline-block;
+			}
+
+			.title {
+				font-size: 96px;
+				margin-bottom: 40px;
+			}
+
+			.quote {
+				font-size: 24px;
+			}
+		</style>
 	</head>
-
-	<body class="gray-bg">
-		<div class="middle-box text-center animated fadeInDown">
-			<div>
-				<div>
-					<h1 class="logo-name">IPM</h1>
-				</div>
-				
-				<h3>Internal Project Management <sup>&beta; v1.0</sup></h3>
-				
-				<form class="m-t" role="form" action="http://localhost/laravel/dashboard/">
-					<div class="form-group">
-						<input type="text" class="form-control text-center" placeholder="Username" required="">
-					</div>
-					<div class="form-group">
-						<input type="password" class="form-control text-center" placeholder="Password" required="">
-					</div>
-					<button type="submit" class="btn btn-primary block full-width m-b">Login</button>
-				</form>
-				
-				<p class="m-t">
-					<small>Copyrights &copy; <script>document.write(new Date().getFullYear());</script></small>
-				</p>
-				<p class="m-t">
-					<img src="dashboard/img/logo.png" alt="Intuitive Web Development Solutions">
-				</p>
+	<body>
+		<div class="container">
+			<div class="content">
+				<div class="title">Laravel 5</div>
+				<div class="quote">{{ Inspiring::quote() }}</div>
 			</div>
 		</div>
-
-		<!-- Mainly scripts -->
-		<script src="dashboard/js/jquery-2.1.1.js"></script>
-		<script src="dashboard/js/bootstrap.min.js"></script>
 	</body>
 </html>
