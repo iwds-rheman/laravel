@@ -1,28 +1,21 @@
 <?php
+use Illuminate\Http\Request;
+Route::resource('/', 'CustomAuth@index');
 
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the controller to call when that URI is requested.
-|
-*/
+Route::group(['middleware' => 'auth'], function () {
 
-Route::get('/', 'WelcomeController@index');
-
-Route::get('home', 'HomeController@index');
-
-Route::controllers([
-	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
-]);
-
-Route::get('dashboard', function()
-{
-    return View::make('dashboard');
+    Route::get('/projects','projectController@index');
+    Route::get('/logout','CustomAuth@Logout');
+    Route::get('/project/task','projectController@showTask');
+    Route::get('/project/task-info','projectController@showTaskInfo');
+    Route::get('/project/todo-task-info','projectController@showTodoTaskInfo');
+    Route::post('/project/add-project','projectController@projectStore');
+    Route::post('/project/add-comment','projectController@commentStore');
+    Route::post('/project/add-task','projectController@taskStore');
 });
 
-?>
+/*Route::get('/',function(){
+   $user = User::find(1);
+    $user -> password = Hash::make('iwds_0001');
+    $user ->save();
+}); */

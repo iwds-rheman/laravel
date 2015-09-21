@@ -1508,11 +1508,13 @@ table.dataTable thead .sorting:after {
   font-size: 12px;
 }
 #animation_box {
-  background-color: #f9f8f8;
-  border-radius: 16px;
-  width: 80%;
-  margin: 0 auto;
-  padding-top: 80px;
+    background-color: #FFFFFF;
+    width: 65%;
+    margin: 0 auto;
+    position: absolute;
+    right: 14px;
+    border:1px solid #e7eaec;
+    display:none;
 }
 .animation-text-box {
   position: absolute;
@@ -1522,13 +1524,18 @@ table.dataTable thead .sorting:after {
   width: 200px;
 }
 .animation-text-info {
-  position: absolute;
-  margin-top: -60px;
-  left: 50%;
-  margin-left: -100px;
-  width: 200px;
+  position: relative;
   font-size: 10px;
+  padding: 20px;
 }
+.animation-box-header a{
+    color:#676a6c;
+}
+.animation-box-header{
+  text-align: right;
+  padding: 10px 10px 0 10px;
+}
+
 .animation-text-box h2 {
   font-size: 54px;
   font-weight: 600;
@@ -2335,8 +2342,7 @@ label.error {
 }
 /* Forum styles  */
 .forum-post-container .media {
-  margin: 10px 10px 10px 10px;
-  padding: 20px 10px 20px 10px;
+  padding: 10px 10px 10px 10px;
   border-bottom: 1px solid #f1f1f1;
 }
 .forum-avatar {
@@ -2395,7 +2401,7 @@ label.error {
 }
 .forum-container,
 .forum-post-container {
-  padding: 30px !important;
+  padding: 10px !important;
 }
 .forum-item small {
   color: #999;
@@ -3165,7 +3171,7 @@ table.table-mail tr td {
 .ibox-title h5 {
   display: inline-block;
   font-size: 14px;
-  margin: 0 0 7px;
+  margin: 0 10px 7px;
   padding: 0;
   text-overflow: ellipsis;
   float: left;
@@ -4936,13 +4942,13 @@ body.skin-3 {
 @media (min-width: 768px) {
   #page-wrapper {
     position: inherit;
-    margin: 0 0 0 220px;
+    margin: 0 0 0 180px;
     min-height: 1200px;
   }
   .navbar-static-side {
     z-index: 101;
     position: absolute;
-    width: 220px;
+    width: 180px;
   }
   .navbar-top-links .dropdown-messages,
   .navbar-top-links .dropdown-tasks,
@@ -5027,4 +5033,178 @@ body.skin-3 {
   .welcome-message {
     display: none;
   }
+}
+.nav>li.projects a{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.tag_box {
+    position: relative;
+    background: #ffffff;
+    border: 1px solid #666;
+    display:inline-block;
+    margin-left:10px;
+}
+.tag_box:after, .tag_box:before {
+    left: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.tag_box:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-left-color: #ffffff;
+    border-width: 8px;
+    margin-top: -8px;
+}
+.tag_box:before {
+    border-color: rgba(194, 225, 245, 0);
+    border-left-color: #666;
+    border-width: 9px;
+    margin-top: -9px;
+}
+.icheckbox_square-green, .iradio_square-green {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    width: 22px;
+    height: 22px;
+    background: url(../img/green.png) no-repeat;
+    border: none;
+    cursor: pointer;
+}
+.icheckbox_square-green:hover {
+    background-position: -24px 0;
+}
+.icheckbox_square-green.checked {
+    background-position: -48px 0 !important;
+}
+.todo-task i.fa-comment-o:hover:before{
+    content: "\f075";
+}
+.todo-task i.fa-comment-o{
+    font-size: 20px;
+}
+.hidden{
+    display:none;
+}
+.comments-content .comments-content-items-content{
+    max-height: 435px;
+    overflow-y: auto;
+}
+.comments-content .media-body{
+    height: 70px;
+}
+textarea { resize:vertical ; }
+.content-wrapper,.project-task,.wrapper-content{
+  padding: 0;
+}
+.project-list .ibox-content{
+    border-right: 1px solid #e7eaec;
+}
+.toggle-project-hide{
+    background-color: #1ab394;
+    color: #fff!important;
+    position: absolute;
+    padding: 10px 1px;
+    top: 525px;
+    display:none;
+}
+.toggle-project {
+    background-color: #1ab394;
+    color: #fff!important;
+    position: absolute;
+    padding: 10px 1px;
+    top: 505px;
+}
+.fa-eye:hover{
+    color:#1ab394;
+}
+.fa-eye-slash:hover{
+    color:#333333;
+}
+.fa-eye-slash:hover:before{
+    content: "\f06e";
+}
+.fa-eye:hover:before{
+    content:'\f070';
+}
+#page-wrapper.project-page-wrapper{
+    padding:0;
+}
+.project-list .ibox-title{
+    border-bottom: 4px solid #e7eaec;
+    border-top:none;
+    padding: 20px 15px 40px;
+}
+.project-list .ibox-content{
+    min-height: 1115px;
+}
+.nav>li.projects a:first-child {
+    padding-right: 5px;
+}
+.nav>li.projects a:last-child {
+    padding-left: 5px;
+}
+.dropdown-menu{
+    min-width: 135px;
+}
+.project-open, .project-open a {
+    background-color: #1ab394;
+    color: #fff;
+}
+.project-task .ibox-content{
+    border-top: 4px solid #e7eaec;
+}
+
+/*status*/
+.Ongoing{
+    height: 100%;
+    width: 2px;
+    background-color: #f8ac59;
+}
+.Pending{
+    height: 100%;
+    width: 2px;
+    background-color: #1c84c6;
+}
+.Completed{
+    height: 100%;
+    width: 2px;
+    background-color: #1ab394;
+}
+.Urgent{
+    border-left: 2px solid #ed5565;
+    height: 50%;
+    width: 2px;
+    background-color: #ed5565;
+}
+.height-half{
+    height:50%!important;
+}
+/*task css*/
+
+.state{
+    height: 100%;
+}
+.task{
+    padding:8px;
+    width: 99%;
+}
+.state,.task{
+    display: inline-block;
+    vertical-align: top;
+}
+.project-task-list .issue-info{
+    padding: 0;
+}
+.task-box{
+	display:none;
 }
